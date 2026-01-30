@@ -12,7 +12,7 @@ from sklearn.ensemble import RandomForestClassifier
 # ------------------------------
 @st.cache_data
 def load_data():
-    df = pd.read_csv("C:\\Users\\sravanthi\\OneDrive\\Pictures\\Desktop\\WA_Fn-UseC_-Telco-Customer-Churn.csv")
+    df = pd.read_csv("WA_Fn-UseC_-Telco-Customer-Churn.csv")
     df.dropna(inplace=True)
     df['TotalCharges'] = pd.to_numeric(df['TotalCharges'], errors='coerce')
     df['TotalCharges'].fillna(df['TotalCharges'].median(), inplace=True)
